@@ -8,16 +8,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class t3_lab2_MainActivity extends AppCompatActivity {
-    TextView resultField;
-    EditText numberField;
-    TextView operationField;
-    Double operand = null;
-    String lastOperation = "=";
+    // Объявление переменных
+    TextView resultField; // Поле для отображения результата
+    EditText numberField; // Поля для ввода чисел
+    TextView operationField; // Поля для отображения операции
+    Double operand = null; //  Переменная для хранения операнда
+    String lastOperation = "="; // Переменная для сохранения последней операции
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.t3_lab_2_activity_main);
+
+        // Привязка переменных к элементам интерфейса
         resultField = findViewById(R.id.resultField);
         numberField = findViewById(R.id.numberField);
         operationField = findViewById(R.id.operationField);
@@ -25,12 +28,14 @@ public class t3_lab2_MainActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
+        // Сохранение состояния активности при её уничтожении (например, при повороте экрана)
         outState.putString("OPERATION", lastOperation);
         if (operand != null)
             outState.putDouble("OPERAND", operand);
         super.onSaveInstanceState(outState);
     }
 
+    // Восстановление сохраненного состояния при создании активности
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -40,6 +45,7 @@ public class t3_lab2_MainActivity extends AppCompatActivity {
         operationField.setText(lastOperation);
     }
 
+    //  Обработчик события клика на кнопку с числом
     public void onNumberClick(View view) {
         Button button = (Button) view;
         numberField.append(button.getText());
@@ -48,6 +54,7 @@ public class t3_lab2_MainActivity extends AppCompatActivity {
         }
     }
 
+    // Обработчик события клика на кнопку с операцией (+, -, *, /)
     public void onOperationClick(View view) {
         Button button = (Button) view;
         String op = button.getText().toString();
@@ -64,6 +71,7 @@ public class t3_lab2_MainActivity extends AppCompatActivity {
         operationField.setText(lastOperation);
     }
 
+    // Обработчик события клика на кнопку "Очистить" (C)
     public void onClearClick(View view) {
         numberField.setText("");
         resultField.setText("0");
@@ -72,6 +80,7 @@ public class t3_lab2_MainActivity extends AppCompatActivity {
         lastOperation = "=";
     }
 
+    // Обработчик события клика на кнопку "Равно" (=)
     public void onEqualsClick(View view) {
         String number = numberField.getText().toString();
         if (number.length() > 0) {
@@ -86,6 +95,7 @@ public class t3_lab2_MainActivity extends AppCompatActivity {
         operationField.setText(lastOperation);
     }
 
+    // Метод для выполнения математических операций
     private void performOperation(Double number, String operation) {
         if (operand == null) {
             operand = number;
