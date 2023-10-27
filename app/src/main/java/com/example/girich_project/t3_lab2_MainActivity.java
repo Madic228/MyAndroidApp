@@ -90,7 +90,7 @@ public class t3_lab2_MainActivity extends AppCompatActivity {
             } catch (NumberFormatException ex) {
                 numberField.setText("");
             }
-        }
+        }   
         lastOperation = "=";
         operationField.setText(lastOperation);
     }
