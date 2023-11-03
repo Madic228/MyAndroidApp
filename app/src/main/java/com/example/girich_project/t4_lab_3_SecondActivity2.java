@@ -16,8 +16,8 @@ public class t4_lab_3_SecondActivity2 extends AppCompatActivity {
         textView.setPadding(16, 16, 16, 16);
         Bundle arguments = getIntent().getExtras();
         t4_lab3_User user;
-        if(arguments!=null){
-            user = (t4_lab3_User)arguments.getSerializable
+        if (arguments != null) {
+            user = (t4_lab3_User) arguments.getSerializable
                     (t4_lab3_User.class.getSimpleName());
             textView.setText("Name: " + user.getName() +
                     "\nCompany: " + user.getCompany() +

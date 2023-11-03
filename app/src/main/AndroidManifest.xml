@@ -189,6 +189,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".t5_lab_1_MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".t5_lab_1_SecondActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".t5_lab_1_ThirdActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
