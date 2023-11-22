@@ -1,7 +1,9 @@
 package com.example.girich_project;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class t1_lab2_MainActivity extends AppCompatActivity {
     @Override
