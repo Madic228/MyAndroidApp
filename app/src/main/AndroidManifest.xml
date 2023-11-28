@@ -294,6 +294,49 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".t7_lab_2_MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".t7_lab_2_MainActivity2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".t8_lab_1_MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".t8_lab_1_MainActivity2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity    android:name=".t8_lab_1_UserActivity"
+            android:exported="false">    <!-- Фильтр намерений для запуска активности по кнопке -->
+            <intent-filter>
+                <action android:name="com.example.mymainapplication.action.USER_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />    </intent-filter>
+        </activity>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
